@@ -26,7 +26,14 @@ noButton.addEventListener("click", function () {
   }
 });
 
+// Thêm sự kiện mouseenter và touchstart cho thiết bị di động
 noButton.addEventListener("mouseenter", function () {
+  if (noCount === MAX_IMAGES) {
+    moveNoButtonRandomly();
+  }
+});
+
+noButton.addEventListener("touchstart", function () {
   if (noCount === MAX_IMAGES) {
     moveNoButtonRandomly();
   }
